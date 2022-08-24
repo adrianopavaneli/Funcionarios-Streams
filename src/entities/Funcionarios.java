@@ -4,11 +4,12 @@ import java.util.Objects;
 
 public class Funcionarios {
     private int id;
-    private String nome;
+    private  String nome;
     private String telefone;
     private int idade;
 
-    public Funcionarios(int id, String nome, String telefone, int idade) {
+    public Funcionarios(int id, String nome, String telefone, int idade)
+    {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
@@ -47,18 +48,29 @@ public class Funcionarios {
         this.idade = idade;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Funcionarios that = (Funcionarios) o;
-        return id == that.id && idade == that.idade && Objects.equals(nome, that.nome) && Objects.equals(telefone, that.telefone);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nome, telefone, idade);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//
+//        Funcionarios that = (Funcionarios) o;
+//        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+//        if (nome != null ? !nome.equals(that.nome) : that.nome != null) return false;
+//        if (telefone != null ? !telefone.equals(that.telefone) : that.telefone != null) return false;
+//        if (idade != null ? !idade.equals(that.idade) : that.idade != null) return false;
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = id != null ? id.hashCode() : 0;
+//        result = 31 * result + (nome != null ? nome.hashCode() : 0);
+//        result = 31 * result + (telefone != null ? telefone.hashCode() : 0);
+//        result = 31 * result + (idade != null ? idade.hashCode() : 0);
+//        return result;
+//    }
 
     @Override
     public String toString() {
